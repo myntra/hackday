@@ -1,75 +1,549 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hackday by myntra</title>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Hackday</h1>
-      <h2 class="project-tagline">Website for the Myntra Mobile Hackday.</h2>
-      <a href="https://github.com/myntra/hackday" class="btn">View on GitHub</a>
-      <a href="https://github.com/myntra/hackday/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/myntra/hackday/tarball/master" class="btn">Download .tar.gz</a>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hackerr&mp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+          /**
+ * @license
+ *
+ * H5F 1.1.1
+ * See https://github.com/ryanseddon/H5F/ for details.
+ *
+ * Copyright (c) 2013 Ryan Seddon
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+(function(e,t){"function"==typeof define&&define.amd?define(t):"object"==typeof module&&module.exports?module.exports=t():e.H5F=t()})(this,function(){var e,t,a,i,n,r,l,s,o,u,d,c,v,p,f,m,b,h,g,y,w,C,N,A,E,$,x=document,k=x.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder",onSubmit:Function.prototype,onInvalid:Function.prototype};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var s=0,o=e.length;o>s;s++)l(e[s]);else l(e)},l=function(a){var i,r=a.elements,l=r.length,c=!!a.attributes.novalidate;if(g(a,"invalid",o,!0),g(a,"blur",o,!0),g(a,"input",o,!0),g(a,"keyup",o,!0),g(a,"focus",o,!0),g(a,"change",o,!0),g(a,"click",u,!0),g(a,"submit",function(i){return e=!0,t||c||a.checkValidity()?(n.onSubmit.call(a,i),void 0):(w(i),void 0)},!1),!v())for(a.checkValidity=function(){return d(a)};l--;)i=!!r[l].attributes.required,"fieldset"!==r[l].nodeName.toLowerCase()&&s(r[l])},s=function(e){var t=e,a=h(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,l=/^(input|keyup)$/i,s=r.test(n.type)?n.type:n.pattern?n.pattern:!1,o=p(t,s),u=m(t,"step"),v=m(t,"min"),b=m(t,"max"),g=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return d.call(this,t)},t.setCustomValidity=function(e){c.call(t,e)},t.validity={valueMissing:a,patternMismatch:o,rangeUnderflow:v,rangeOverflow:b,stepMismatch:u,customError:g,valid:!(a||o||u||v||b||g)},n.placeholder&&!l.test(i)&&f(t)},o=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,l=/^(checkbox|radio)$/i,u=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||s(t),t.validity.valid&&(""!==t.value||l.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&u&&(y(t.form,"keyup",o,!0),u=!1))},d=function(t){var a,i,r,l,s,u=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var d=0,c=a.length;c>d;d++)i=a[d],r=!!i.attributes.disabled,l=!!i.attributes.required,s=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&!r&&(l||s&&l)&&(o(i),i.validity.valid||u||(e&&i.focus(),u=!0,n.onInvalid.call(t,i)));return!u}return o(t),t.validity.valid},c=function(e){var t=this;t.validationMessage=e},u=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(k,"validity")&&E(k,"checkValidity")},p=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},f=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,l=/^password$/i,s=!!("placeholder"in k);s||!r.test(e.nodeName)||l.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,g(e.form,"submit",function(){i="submit",f(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),l=(r-a)%n;return h(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==l:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},b=function(e){var t=!!e.attributes.required;return t?h(e):!1},h=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},g=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+        var count =0;
+        function addMem(){
+            $('#member'+count++).show();
+            if(count==3){
+                $("#addMember").hide();
+            }
+        }        </script>
+
+</head>
+
+<body id="page-top" class="index" cz-shortcut-listen="true">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="https://d6kkp3rk1o2kk.cloudfront.net/myx/images/myntra.31f8417cc06ef6309718fdd381004886ea6171fc.png" style="display: inline;vertical-align: top;margin-top: -3px;">Hackerr&mp</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+                    <!-- <li class="">
+                        <a class="page-scroll" href="#services">Build</a>
+                    </li> -->
+                    <li class="">
+                        <a class="page-scroll" href="#about">Timeline</a>
+                    </li>
+                    <!-- <li class="">
+                        <a class="page-scroll" href="#team">Meet The speakers</a>
+                    </li> -->
+                    <li class="">
+                        <a class="page-scroll" href="#contact">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Mobile HackDay</div>
+                <div class="intro-lead-in">25th April, Myntra Office</div>
+                <a href="#contact" class="page-scroll btn btn-xl">Register Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <!-- <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Build the next big thing</h2>
+                    <h3 class="section-subheading text-muted">And win exciting prizes</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">E-Commerce</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Responsive Design</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Web Security</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Schedule</h2>
+                    <h3 class="section-subheading text-muted">What,When?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="./img/myntra-office.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>9 AM</h4>
+                                    <h4 class="subheading">Registration</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="./img/photo.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>10 AM</h4>
+                                    <h4 class="subheading">Keynote</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="./img/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>11 AM</h4>
+                                    <h4 class="subheading">Hackday Begins</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="./img/talkspic.png" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>4-6 AM</h4>
+                                    <h4 class="subheading">Talks</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-image">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="./img/online_demo_alt.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>9AM,26th April</h4>
+                                    <h4 class="subheading">Presentations to Jury</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted"></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of the
+                                    <br>Hackday
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="main-content">
-      <h1>
-<a id="hero-section" class="anchor" href="#hero-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hero section</h1>
+    <!-- Team Section -->
+    <!-- <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Meet the speakers</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="./img/1(1).jpg" class="img-responsive img-circle" alt="">
+                        <h4>Kay Garland</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="./img/2(1).jpg" class="img-responsive img-circle" alt="">
+                        <h4>Larry Parker</h4>
+                        <p class="text-muted">Lead Marketer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="./img/3(1).jpg" class="img-responsive img-circle" alt="">
+                        <h4>Diana Pertersen</h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Register</h2>
+                    <h3 class="section-subheading text-muted">* Required</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                   
+                    <iframe src="https://docs.google.com/forms/d/1V326g9b8GkexRc8wmzk-qxmONBA7BFqL9bs9jkhMviA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;"  onload="if(submitted)
+{alert('Registered');location.reload();}" name="hidden_iframe" id="hidden_iframe">Loading...</iframe>
 
-<ol>
-<li>Background photo and logo Suhrid is giving.</li>
-<li>Hero text: Mobile Hackday (25th April, Myntra Office)</li>
-</ol>
+                    <div class="row">
+                            <div class="col-md-8" style="margin: 0 auto;float: none;">
+                            <div id="successPlaceholder"> </div>
+                            <form action="https://docs.google.com/a/myntra.com/forms/d/1V326g9b8GkexRc8wmzk-qxmONBA7BFqL9bs9jkhMviA/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;"><ol role="list" class="ss-question-list" style="padding-left: 0" id="contactForm" novalidate="">
+                                <div class="form-group">
+                                    <input type="text" name="entry.543340515" value="" class="ss-q-short form-control" id="entry_543340515" dir="auto" aria-label="Team Name  " aria-required="true" required="" title="" placeholder="Team Name *">
+                                    <div class="error-message" id="1789310130_errorMessage"></div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="entry.608232164" rows="8" cols="0" class="ss-q-long form-control" id="entry_608232164" dir="auto" aria-label="Idea (optional) " placeholder="Idea (optional) "></textarea>
+                                    <div class="error-message" id="2119257247_errorMessage"></div>
+                                </div>
+                                
+                                <div class="errorbox-good" role="listitem">
+                                <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+                                <h2 class="ss-section-title text-muted">Member 1 Details</h2>
+                                <div class="ss-section-description ss-no-ignore-whitespace text-muted">Teams would ideally be of 2-4 members.</div>
+                                </div></div></div> 
 
-<h1>
-<a id="prizes" class="anchor" href="#prizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prizes</h1>
+                                
+                                <div class="form-group">
+                                <input type="text" name="entry.935269490"  value="" class="ss-q-short form-control" id="entry_935269490" dir="auto" aria-label="Name  " aria-required="true" required="" title="" placeholder="Name *">
+                                <div class="error-message" id="1661563336_errorMessage"></div>
+                                </div>
 
-<p>(TO BE ANNOUNCED)</p>
+                                <div class="form-group">
+                                <input type="email" name="entry.995387356" value="" class="ss-q-short form-control" id="entry_995387356" dir="auto" aria-label="Email ID  " aria-required="true" required="" title="" placeholder="Email *" data-validation-required-message="Please enter your email address.">
+                                <div class="error-message" id="180012043_errorMessage"></div>
+                                </div>
 
-<h1>
-<a id="schedule" class="anchor" href="#schedule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schedule</h1>
+                                <div class="form-group">
+                                <input type="text" name="entry.1083801955" value="" class="ss-q-short form-control" id="entry_1083801955" dir="auto" aria-label="Phone Number  " title="" placeholder="Phone Number">
+                                <div class="error-message" id="1128648814_errorMessage"></div>
+                                </div>
 
-<p>25th April</p>
+                                <div id = "member0" style="display:none;">
+                                    <div class="errorbox-good" role="listitem">
+                                <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+                                <h2 class="ss-section-title text-muted">Member 2 Details</h2>
+                                <div class="ss-section-description ss-no-ignore-whitespace text-muted">Teams would ideally be of 2-4 members.</div>
+                                </div></div></div> 
 
-<ul>
-<li>9am Registration</li>
-<li>10am Keynote Talk (TBA)</li>
-<li>11am Hackday Begins</li>
-<li>1pm Lunch</li>
-<li>4-6pm Talks (TBA)</li>
-</ul>
+                                <div class="form-group">
+                                <input type="text" name="entry.1015853625" value="" class="ss-q-short form-control" id="entry_1015853625" dir="auto" aria-label="Name  " title="" placeholder="Name">
+                                <div class="error-message" id="1190489797_errorMessage"></div>
+                                </div>
 
-<p>26th April</p>
+                                <div class="form-group">
+                                <input type="email" name="entry.402051143" value="" class="ss-q-short form-control" id="entry_402051143" dir="auto" aria-label="Email ID  " title="" placeholder="Email">
+                                <div class="error-message" id="1741904975_errorMessage"></div>
+                                </div>
 
-<ul>
-<li>9am to 10am Presentations to Jury</li>
-</ul>
+                                <div class="form-group">
+                                <input type="text" name="entry.1471862718" value="" class="ss-q-short form-control" id="entry_1471862718" dir="auto" aria-label="Phone Number  " title="" placeholder="Phone Number">
+                                <div class="error-message" id="2066351138_errorMessage"></div></div> 
 
-<h1>
-<a id="speakers" class="anchor" href="#speakers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Speakers</h1>
+                                <label class="ss-q-item-label" for="entry_1109971047"><div class="ss-q-title text-muted">T-shirt Size
+                                </div></label>
 
-<p>(TO BE ANNOUNCED)</p>
+                                <ul class="ss-choices" role="radiogroup" aria-label="T-shirt Size  ">
+                                <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2098269540" value="S" id="group_2098269540_1" role="radio" class="ss-q-radio " aria-label="S"></span>
+                                <span class="ss-choice-label text-muted">S</span>
+                                </label></li> 
 
-<h1>
-<a id="registration" class="anchor" href="#registration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Registration</h1>
+                                <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2098269540" value="M" id="group_2098269540_2" role="radio" class="ss-q-radio" aria-label="M"></span>
+                                <span class="ss-choice-label text-muted">M</span>
+                                </label></li> 
+                                <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2098269540" value="L" id="group_2098269540_3" role="radio" class="ss-q-radio" aria-label="L"></span>
+                                <span class="ss-choice-label text-muted">L</span>
+                                </label></li> 
 
-<p>Link to Google Form for Registration.</p>
+                                <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2098269540" value="XL" id="group_2098269540_4" role="radio" class="ss-q-radio" aria-label="XL"></span>
+                                <span class="ss-choice-label text-muted">XL</span>
+                                </label></li></ul>
+                                <div class="error-message" id="1109971047_errorMessage">
+                                </div>
+                                </div>
+                                <div id="member1" style="display:none;">
+                                <div class="errorbox-good" role="listitem">
+                                <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+                                <h2 class="ss-section-title text-muted">Member 3 Details</h2>
+                                <div class="ss-section-description ss-no-ignore-whitespace text-muted">Teams would ideally be of 2-4 members.</div>
+                                </div></div></div> 
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/myntra/hackday">Hackday</a> is maintained by <a href="https://github.com/myntra">myntra</a>.</span>
+                                <div class="form-group">
+                                <input type="text" name="entry.538220802" value="" class="ss-q-short form-control" id="entry_538220802" dir="auto" aria-label="Name  " placeholder="Name" title="">
+                                <div class="error-message" id="1823982130_errorMessage"></div>
+                                </div>
+                                <div class="form-group">
+                                <input type="email" name="entry.1187390430" value="" class="ss-q-short form-control" id="entry_1187390430" dir="auto" aria-label="Email ID  " title="" placeholder="Email">
+                                <div class="error-message" id="1357112996_errorMessage"></div>
+                                </div>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+                                <div class="form-group">
+                                <input type="text" name="entry.479031841" value="" class="ss-q-short form-control" id="entry_479031841" dir="auto" aria-label="Phone Number  " placeholder="Phone Number" title="">
+                                <div class="error-message" id="608679691_errorMessage"></div>
+                                </div>
 
+                                <label class="ss-q-item-label" for="entry_1109971047"><div class="ss-q-title text-muted">T-shirt Size
+                                </div></label>
+
+                                <ul class="ss-choices" role="radiogroup" aria-label="T-shirt Size  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.141971094" value="S" id="group_141971094_1" role="radio" class="ss-q-radio" aria-label="S"></span>
+                                <span class="ss-choice-label text-muted">S</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.141971094" value="M" id="group_141971094_2" role="radio" class="ss-q-radio" aria-label="M"></span>
+                                <span class="ss-choice-label text-muted">M</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.141971094" value="L" id="group_141971094_3" role="radio" class="ss-q-radio" aria-label="L"></span>
+                                <span class="ss-choice-label text-muted">L</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.141971094" value="XL" id="group_141971094_4" role="radio" class="ss-q-radio" aria-label="XL"></span>
+                                <span class="ss-choice-label text-muted">XL</span>
+                                </label></li></ul>
+                                <div class="error-message" id="46352290_errorMessage"></div>
+                                </div>
+                                <div id="member2" style="display:none;">
+                                    <div class="errorbox-good" role="listitem">
+                                <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+                                <h2 class="ss-section-title text-muted">Member 4 Details</h2>
+                                <div class="ss-section-description ss-no-ignore-whitespace text-muted">Teams would ideally be of 2-4 members.</div>
+                                </div></div></div> 
+
+                                <div class="form-group">
+                                <input type="text" name="entry.1760417682" value="" class="ss-q-short form-control" id="entry_1760417682" dir="auto" aria-label="Name  " title="" placeholder="Name">
+                                <div class="error-message" id="1283020525_errorMessage"></div>
+                                </div>
+
+                                <div class="form-group">
+                                <input type="email" name="entry.1732036630" value="" class="ss-q-short form-control" id="entry_1732036630" dir="auto" aria-label="Email ID  " title="" placeholder="Email">
+                                <div class="error-message" id="419954887_errorMessage"></div>
+                                </div> 
+
+                                <div class="form-group">
+                                <input type="text" name="entry.279642807" value="" class="ss-q-short form-control" id="entry_279642807" dir="auto" aria-label="Phone Number  " title="" placeholder="Phone Number">
+                                <div class="error-message" id="1105062736_errorMessage"></div>
+                                </div>
+
+                                <label class="ss-q-item-label" for="entry_1109971047"><div class="ss-q-title text-muted">T-shirt Size
+                                </div></label>
+
+                                <ul class="ss-choices" role="radiogroup" aria-label="T-shirt Size  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1993879166" value="S" id="group_1993879166_1" role="radio" class="ss-q-radio" aria-label="S"></span>
+                                <span class="ss-choice-label text-muted">S</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1993879166" value="M" id="group_1993879166_2" role="radio" class="ss-q-radio" aria-label="M"></span>
+                                <span class="ss-choice-label text-muted">M</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1993879166" value="L" id="group_1993879166_3" role="radio" class="ss-q-radio" aria-label="L"></span>
+                                <span class="ss-choice-label text-muted">L</span>
+                                </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1993879166" value="XL" id="group_1993879166_4" role="radio" class="ss-q-radio" aria-label="XL"></span>
+                                <span class="ss-choice-label text-muted">XL</span>
+                                </label></li></ul>
+                                <div class="error-message" id="620294988_errorMessage"></div>
+                                </div>
+                                
+                                <input type="hidden" name="draftResponse" value="[,,&quot;2039564869411281370&quot;]
+                                ">
+                                <input type="hidden" name="pageHistory" value="0">
+
+
+                                <input type="hidden" name="fbzx" value="2039564869411281370">
+
+                                <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+                                <input type="button" onclick = "addMem()" class = "btn btn-default" value="Add member" id ="addMember"/>
+                                </br>
+                                <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-xl"></td>
+</tr></tbody></table></div></ol></div></div></form>
+                </div>
+            </div>
+        </div>
     </section>
 
-  
-  </body>
-</html>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright © Myntra 2015</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/classie.js"></script>
+    <script src="./js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="./js/jqBootstrapValidation.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./js/agency.js"></script>
+
+
+
+
+</body></html>
