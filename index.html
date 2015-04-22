@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#"><head>
-    
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
@@ -9,7 +11,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://hackerramp.com/" />
     <meta property="og:image" content="http://i.imgur.com/9ShTICM.png" />
-    <meta property="og:description" content="Calling out all coders, hackers, tinkerers and madcaps to come together and build the future of mobile, fashion and commerce." /> 
+    <meta property="og:description" content="Calling out all coders, hackers, tinkerers and madcaps to come together and build the future of mobile, fashion and commerce." />
     <meta property="og:site_name" content="Myntra" />
     <meta property="fb:admins" content="520074227" />
 
@@ -44,19 +46,203 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        /**
+         * @license
+         *
+         * H5F 1.1.1
+         * See https://github.com/ryanseddon/H5F/ for details.
+         *
+         * Copyright (c) 2013 Ryan Seddon
+         *
+         * Permission is hereby granted, free of charge, to any person
+         * obtaining a copy of this software and associated documentation
+         * files (the "Software"), to deal in the Software without
+         * restriction, including without limitation the rights to use,
+         * copy, modify, merge, publish, distribute, sublicense, and/or sell
+         * copies of the Software, and to permit persons to whom the
+         * Software is furnished to do so, subject to the following
+         * conditions:
+         *
+         * The above copyright notice and this permission notice shall be
+         * included in all copies or substantial portions of the Software.
+         *
+         * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+         * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+         * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+         * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+         * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+         * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+         * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+         * OTHER DEALINGS IN THE SOFTWARE.
+         */
+        (function(e, t) {
+            "function" == typeof define && define.amd ? define(t) : "object" == typeof module && module.exports ? module.exports = t() : e.H5F = t()
+        })(this, function() {
+            var e, t, a, i, n, r, l, s, o, u, d, c, v, p, f, m, b, h, g, y, w, C, N, A, E, $, x = document,
+                k = x.createElement("input"),
+                q = /^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                M = /[a-z][\-\.+a-z]*:\/\//i,
+                L = /^(input|select|textarea)$/i;
+            return r = function(e, t) {
+                var a = !e.nodeType || !1,
+                    i = {
+                        validClass: "valid",
+                        invalidClass: "error",
+                        requiredClass: "required",
+                        placeholderClass: "placeholder",
+                        onSubmit: Function.prototype,
+                        onInvalid: Function.prototype
+                    };
+                if ("object" == typeof t)
+                    for (var r in i) t[r] === void 0 && (t[r] = i[r]);
+                if (n = t || i, a)
+                    for (var s = 0, o = e.length; o > s; s++) l(e[s]);
+                else l(e)
+            }, l = function(a) {
+                var i, r = a.elements,
+                    l = r.length,
+                    c = !!a.attributes.novalidate;
+                if (g(a, "invalid", o, !0), g(a, "blur", o, !0), g(a, "input", o, !0), g(a, "keyup", o, !0), g(a, "focus", o, !0), g(a, "change", o, !0), g(a, "click", u, !0), g(a, "submit", function(i) {
+                        return e = !0, t || c || a.checkValidity() ? (n.onSubmit.call(a, i), void 0) : (w(i), void 0)
+                    }, !1), !v())
+                    for (a.checkValidity = function() {
+                            return d(a)
+                        }; l--;) i = !!r[l].attributes.required, "fieldset" !== r[l].nodeName.toLowerCase() && s(r[l])
+            }, s = function(e) {
+                var t = e,
+                    a = h(t),
+                    n = {
+                        type: t.getAttribute("type"),
+                        pattern: t.getAttribute("pattern"),
+                        placeholder: t.getAttribute("placeholder")
+                    },
+                    r = /^(email|url)$/i,
+                    l = /^(input|keyup)$/i,
+                    s = r.test(n.type) ? n.type : n.pattern ? n.pattern : !1,
+                    o = p(t, s),
+                    u = m(t, "step"),
+                    v = m(t, "min"),
+                    b = m(t, "max"),
+                    g = !("" === t.validationMessage || void 0 === t.validationMessage);
+                t.checkValidity = function() {
+                    return d.call(this, t)
+                }, t.setCustomValidity = function(e) {
+                    c.call(t, e)
+                }, t.validity = {
+                    valueMissing: a,
+                    patternMismatch: o,
+                    rangeUnderflow: v,
+                    rangeOverflow: b,
+                    stepMismatch: u,
+                    customError: g,
+                    valid: !(a || o || u || v || b || g)
+                }, n.placeholder && !l.test(i) && f(t)
+            }, o = function(e) {
+                var t = C(e) || e,
+                    a = /^(input|keyup|focusin|focus|change)$/i,
+                    r = /^(submit|image|button|reset)$/i,
+                    l = /^(checkbox|radio)$/i,
+                    u = !0;
+                !L.test(t.nodeName) || r.test(t.type) || r.test(t.nodeName) || (i = e.type, v() || s(t), t.validity.valid && ("" !== t.value || l.test(t.type)) || t.value !== t.getAttribute("placeholder") && t.validity.valid ? (A(t, [n.invalidClass, n.requiredClass]), N(t, n.validClass)) : a.test(i) ? t.validity.valueMissing && A(t, [n.requiredClass, n.invalidClass, n.validClass]) : t.validity.valueMissing ? (A(t, [n.invalidClass, n.validClass]), N(t, n.requiredClass)) : t.validity.valid || (A(t, [n.validClass, n.requiredClass]), N(t, n.invalidClass)), "input" === i && u && (y(t.form, "keyup", o, !0), u = !1))
+            }, d = function(t) {
+                var a, i, r, l, s, u = !1;
+                if ("form" === t.nodeName.toLowerCase()) {
+                    a = t.elements;
+                    for (var d = 0, c = a.length; c > d; d++) i = a[d], r = !!i.attributes.disabled, l = !!i.attributes.required, s = !!i.attributes.pattern, "fieldset" !== i.nodeName.toLowerCase() && !r && (l || s && l) && (o(i), i.validity.valid || u || (e && i.focus(), u = !0, n.onInvalid.call(t, i)));
+                    return !u
+                }
+                return o(t), t.validity.valid
+            }, c = function(e) {
+                var t = this;
+                t.validationMessage = e
+            }, u = function(e) {
+                var a = C(e);
+                a.attributes.formnovalidate && "submit" === a.type && (t = !0)
+            }, v = function() {
+                return E(k, "validity") && E(k, "checkValidity")
+            }, p = function(e, t) {
+                if ("email" === t) return !q.test(e.value);
+                if ("url" === t) return !M.test(e.value);
+                if (t) {
+                    var i = e.getAttribute("placeholder"),
+                        n = e.value;
+                    return a = RegExp("^(?:" + t + ")$"), n === i ? !1 : "" === n ? !1 : !a.test(e.value)
+                }
+                return !1
+            }, f = function(e) {
+                var t = {
+                        placeholder: e.getAttribute("placeholder")
+                    },
+                    a = /^(focus|focusin|submit)$/i,
+                    r = /^(input|textarea)$/i,
+                    l = /^password$/i,
+                    s = !!("placeholder" in k);
+                s || !r.test(e.nodeName) || l.test(e.type) || ("" !== e.value || a.test(i) ? e.value === t.placeholder && a.test(i) && (e.value = "", A(e, n.placeholderClass)) : (e.value = t.placeholder, g(e.form, "submit", function() {
+                    i = "submit", f(e)
+                }, !0), N(e, n.placeholderClass)))
+            }, m = function(e, t) {
+                var a = parseInt(e.getAttribute("min"), 10) || 0,
+                    i = parseInt(e.getAttribute("max"), 10) || !1,
+                    n = parseInt(e.getAttribute("step"), 10) || 1,
+                    r = parseInt(e.value, 10),
+                    l = (r - a) % n;
+                return h(e) || isNaN(r) ? "number" === e.getAttribute("type") ? !0 : !1 : "step" === t ? e.getAttribute("step") ? 0 !== l : !1 : "min" === t ? e.getAttribute("min") ? a > r : !1 : "max" === t ? e.getAttribute("max") ? r > i : !1 : void 0
+            }, b = function(e) {
+                var t = !!e.attributes.required;
+                return t ? h(e) : !1
+            }, h = function(e) {
+                var t = e.getAttribute("placeholder"),
+                    a = /^(checkbox|radio)$/i,
+                    i = !!e.attributes.required;
+                return !(!i || "" !== e.value && e.value !== t && (!a.test(e.type) || $(e)))
+            }, g = function(e, t, a, i) {
+                E(window, "addEventListener") ? e.addEventListener(t, a, i) : E(window, "attachEvent") && window.event !== void 0 && ("blur" === t ? t = "focusout" : "focus" === t && (t = "focusin"), e.attachEvent("on" + t, a))
+            }, y = function(e, t, a, i) {
+                E(window, "removeEventListener") ? e.removeEventListener(t, a, i) : E(window, "detachEvent") && window.event !== void 0 && e.detachEvent("on" + t, a)
+            }, w = function(e) {
+                e = e || window.event, e.stopPropagation && e.preventDefault ? (e.stopPropagation(), e.preventDefault()) : (e.cancelBubble = !0, e.returnValue = !1)
+            }, C = function(e) {
+                return e = e || window.event, e.target || e.srcElement
+            }, N = function(e, t) {
+                var a;
+                e.className ? (a = RegExp("(^|\\s)" + t + "(\\s|$)"), a.test(e.className) || (e.className += " " + t)) : e.className = t
+            }, A = function(e, t) {
+                var a, i, n = "object" == typeof t ? t.length : 1,
+                    r = n;
+                if (e.className)
+                    if (e.className === t) e.className = "";
+                    else
+                        for (; n--;) a = RegExp("(^|\\s)" + (r > 1 ? t[n] : t) + "(\\s|$)"), i = e.className.match(a), i && 3 === i.length && (e.className = e.className.replace(a, i[1] && i[2] ? " " : ""))
+            }, E = function(e, t) {
+                var a = typeof e[t],
+                    i = RegExp("^function|object$", "i");
+                return !!(i.test(a) && e[t] || "unknown" === a)
+            }, $ = function(e) {
+                for (var t = document.getElementsByName(e.name), a = 0; t.length > a; a++)
+                    if (t[a].checked) return !0;
+                return !1
+            }, {
+                setup: r
+            }
+        });
+    </script>
 
 </head>
 
 <body id="page-top" class="index" cz-shortcut-listen="true">
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -114,9 +300,23 @@
 
                 <div style="margin-top:40px;">
                     <div style="top: -5px; margin-left: 10px; margin-right: 5px;" class="fb-share-button" data-href="http://hackerramp.com" data-layout="button_count"></div>
-                    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-<script type="IN/Share" data-url="http://hackerramp.com" data-counter="right"></script>
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hackerramp.com" data-text="HackerRamp: Myntra Mobile Hackday is here!">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                        lang: en_US
+                    </script>
+                    <script type="IN/Share" data-url="http://hackerramp.com" data-counter="right"></script>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hackerramp.com" data-text="HackerRamp: Myntra Mobile Hackday is here!">Tweet</a>
+                    <script>
+                        ! function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0],
+                                p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + '://platform.twitter.com/widgets.js';
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, 'script', 'twitter-wjs');
+                    </script>
                 </div>
 
             </div>
@@ -142,9 +342,9 @@
                 <p class="large text-muted">Limited seats available, register soon! You can sign up as an individual or in a team of up to 4.</p>
                 <p class="large text-muted">Things to look forward to include:</p>
                 <ul class="large text-muted">
-                    <li>Feedback and Talks
-                    <li>Exciting prizes
-                    <li>Food and drinks
+                    <li>Feedback and Talks</li>
+                    <li>Exciting prizes</li>
+                    <li>Food and drinks</li>
                 </ul>
                 <p class="large text-muted">Spread the word!</p>
             </div>
@@ -198,9 +398,74 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    
-                <iframe src="https://docs.google.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/viewform?embedded=true" width="680" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                <div class="col-lg-3 text-center"></div>
+                <div class="col-lg-6 text-center">
+
+                    <iframe src="https://docs.google.com/a/myntra.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/formResponse?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;" onload="if(window.submitted)
+{alert('Registered');location.reload();}" name="hidden_iframe" id="hidden_iframe">Loading...</iframe>
+
+                    <div class="row">
+                        <div class="col-md-8" style="margin: 0 auto;float: none;">
+                            <div id="successPlaceholder"> </div>
+                            <form action="https://docs.google.com/a/myntra.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/formResponse?embedded=true" method="POST" id="ss-form" target="hidden_iframe" onsubmit="window.submitted=true;">
+                                <ol role="list" class="ss-question-list" style="padding-left: 0" id="contactForm" novalidate="">
+                                    <div class="form-group">
+                                        <input type="text" name="entry.173266981" value="" class="ss-q-short form-control" id="entry_173266981" dir="auto" aria-label="Name (On event day, please carry an ID card with you.) " aria-required="true" required="" title="" placeholder="Name">
+                                        <div class="error-message" id="140820943_errorMessage"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="entry.265480531" value="" class="ss-q-short form-control" id="entry_265480531" dir="auto" aria-label="Email ID  " aria-required="true" required="" title="" placeholder="Email ID">
+                                        <div class="error-message" id="1281563802_errorMessage"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="entry.193954616" value="" class="ss-q-short form-control" id="entry_193954616" dir="auto" aria-label="Phone Number  " title="" placeholder="Phone Number">
+                                        <div class="error-message" id="1191391589_errorMessage"></div>
+                                    </div>
+
+                                    <div class="ss-form-question errorbox-good" role="listitem">
+                                        <div dir="ltr" class="ss-item  ss-radio">
+                                            <div class="ss-form-entry">
+                                                <!-- <label class="ss-q-item-label" for="entry_1799457230">
+                                                    <div class="ss-q-title text-muted">T-shirt Size
+                                                    </div>
+                                                    <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                                                </label> -->
+
+                                                <select class="form-control" name="entry.1799457230" id="entry_1799457230" aria-label="T-shirt Size  ">
+                                                    <option value="">T-shirt Size</option>
+                                                    <option value="S">S</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L">L</option>
+                                                    <option value="XL">XL</option>
+                                                    <option value="XXL">XXL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="form-group">
+                                        <input type="text" name="entry.1812022483" value="" class="ss-q-short form-control" id="entry_1812022483" dir="auto" aria-label="Team Name (optional) Please ask your team members (if any) to also register with this form. " title="" placeholder="Team Name (optional)">
+                                        <div class="error-message" id="110996319_errorMessage"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="entry.1285110315" value="" class="ss-q-short form-control" id="entry_1285110315" dir="auto" aria-label="Idea (optional)  " title="" placeholder="Idea (optional)">
+                                        <div class="error-message" id="483637737_errorMessage"></div>
+                                    </div>
+
+                                    <input type="hidden" name="draftResponse" value="[,,&quot;9039545399035243575&quot;]">
+                                    <input type="hidden" name="pageHistory" value="0">
+                                    <input type="hidden" name="fbzx" value="9039545399035243575">
+
+                                    <div class="ss-item ss-navigate">
+                                        <br />
+                                        <input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-xl">
+                                    </div>
+                                </ol>
+                        </div>
+                    </div>
+                    </form>
 
                 </div>
             </div>
@@ -302,7 +567,7 @@
                                 </div>
                             </div>
                         </li>
-                        </ul>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -389,7 +654,7 @@
     </section>
 
     <section style="background-color: #3a3a3a">
-        <div class="container" >
+        <div class="container">
             <div class="row text-center">
                 <p class="text-center">
                     <img width=400 src="/img/large-text.jpg" />
@@ -400,158 +665,155 @@
 
     <section id="faqs">
         <div class="container">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">FAQs</h2>
-                    <h3 class="section-subheading text-muted">Email us at hackerramp@myntra.com with further queries.</h3>
-                </div>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="panel-group" id="accordion">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">FAQs</h2>
+                <h3 class="section-subheading text-muted">Email us at hackerramp@myntra.com with further queries.</h3>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
             <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Is the event open to all?<i class="indicator icon-plus pull-right"></i></p>
           </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Yes.
-                                    </div>
-                                </div>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse">
+                            <div class="panel-body">
+                                Yes.
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
             <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">What is the venue for the hackathon?<i class="indicator icon-plus pull-right"></i></p>
           </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Myntra Office, Bangalore.
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What about food?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseFour" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Food is on us.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Is it compulsory to stay back overnight?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseFive" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Not necessary.
-                                    </div>
-                                </div>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse">
+                            <div class="panel-body">
+                                Myntra Office, Bangalore.
 
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Do I need to bring my laptop?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseSix" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Yes.
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Can I participate as an individual?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseSeven" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Yes, you can participate as an individual or in a team.
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">What is the team size limit?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseNine" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Each team can have a maximum of 4 members.
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Will there be goodies?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseNine" class="panel-collapse">
-                                    <div class="panel-body">
-                                        Yes!
-                                    </div>
-                                </div>
-
-                            </div>                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Is there any registration fee?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                                </div>
-                                <div id="collapseTen" class="panel-collapse">
-                                    <div class="panel-body">
-                                        No.
-                                    </div>
-                                </div>
-
-                            </div>
-
                         </div>
                     </div>
 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What about food?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse">
+                            <div class="panel-body">
+                                Food is on us.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Is it compulsory to stay back overnight?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse">
+                            <div class="panel-body">
+                                Not necessary.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Do I need to bring my laptop?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse">
+                            <div class="panel-body">
+                                Yes.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Can I participate as an individual?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse">
+                            <div class="panel-body">
+                                Yes, you can participate as an individual or in a team.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">What is the team size limit?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseNine" class="panel-collapse">
+                            <div class="panel-body">
+                                Each team can have a maximum of 4 members.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Will there be goodies?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseNine" class="panel-collapse">
+                            <div class="panel-body">
+                                Yes!
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Is there any registration fee?<i class="indicator icon-plus pull-right"></i></p>
+          </h4>
+                        </div>
+                        <div id="collapseTen" class="panel-collapse">
+                            <div class="panel-body">
+                                No.
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
+            </div>
+
+
+        </div>
     </section>
 
-        <!-- Map Section -->
+    <!-- Map Section -->
     <section id="where">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Location</h2>
-<!--                     <h3 class="section-subheading text-muted">Build the future of mobile.</h3> -->
+                    <!--                     <h3 class="section-subheading text-muted">Build the future of mobile.</h3> -->
                 </div>
             </div>
 
             <div class="map col-lg-12">
-                <iframe
-                  width="800"
-                  height="500"
-                  frameborder="0" style="border:0"
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD9qoa68uzE9xtT_Gb-7nHaHnwHkbF2_-k&q=Myntra+Designs,+Krishna+Reddy+Industrial+Area,+Hosapalya,+Muneshwara+Nagar,+Bengaluru,+Karnataka+560068" ></iframe>
+                <iframe width="800" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD9qoa68uzE9xtT_Gb-7nHaHnwHkbF2_-k&q=Myntra+Designs,+Krishna+Reddy+Industrial+Area,+Hosapalya,+Muneshwara+Nagar,+Bengaluru,+Karnataka+560068"></iframe>
             </div>
         </div>
     </section>
 
-   
+
 
     <footer>
         <div class="container">
@@ -602,4 +864,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
