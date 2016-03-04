@@ -265,7 +265,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(http://assets.myntassets.com/w_1440,h_900/v1/dacytckud1f5z4i6l2g2.png);
+    background-image: url(http://assets.myntassets.com/v1/fxbsahrcoej1twqnubgz.png);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -275,7 +275,7 @@ header {
 }
 
 header .intro-text {
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
 }
 
@@ -302,7 +302,7 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 50px;
+        padding-top: 300px;
         padding-bottom: 200px;
     }
 
