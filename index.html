@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-
-<head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+<!DOCTYPE HTML>
+<!--
+	Tessellate by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Open Graph data -->
     <meta property="og:title" content="HackerRamp: Myntra Mobile Hackday" />
@@ -28,211 +31,16 @@
     <meta name="description" content="Calling out all coders, hackers, tinkerers and madcaps to come together and build the future of mobile, fashion and commerce.">
     <meta name="author" content="Myntra Designs">
 
-    <title>HackerRamp - Myntra Mobile Hackday</title>
+    <title>HackerRamp - Myntra Hackday</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-    <!-- Custom CSS -->
-    <link href="./css/agency.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="./css/style.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript">
-        /**
-         * @license
-         *
-         * H5F 1.1.1
-         * See https://github.com/ryanseddon/H5F/ for details.
-         *
-         * Copyright (c) 2013 Ryan Seddon
-         *
-         * Permission is hereby granted, free of charge, to any person
-         * obtaining a copy of this software and associated documentation
-         * files (the "Software"), to deal in the Software without
-         * restriction, including without limitation the rights to use,
-         * copy, modify, merge, publish, distribute, sublicense, and/or sell
-         * copies of the Software, and to permit persons to whom the
-         * Software is furnished to do so, subject to the following
-         * conditions:
-         *
-         * The above copyright notice and this permission notice shall be
-         * included in all copies or substantial portions of the Software.
-         *
-         * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-         * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-         * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-         * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-         * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-         * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-         * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-         * OTHER DEALINGS IN THE SOFTWARE.
-         */
-        (function(e, t) {
-            "function" == typeof define && define.amd ? define(t) : "object" == typeof module && module.exports ? module.exports = t() : e.H5F = t()
-        })(this, function() {
-            var e, t, a, i, n, r, l, s, o, u, d, c, v, p, f, m, b, h, g, y, w, C, N, A, E, $, x = document,
-                k = x.createElement("input"),
-                q = /^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                M = /[a-z][\-\.+a-z]*:\/\//i,
-                L = /^(input|select|textarea)$/i;
-            return r = function(e, t) {
-                var a = !e.nodeType || !1,
-                    i = {
-                        validClass: "valid",
-                        invalidClass: "error",
-                        requiredClass: "required",
-                        placeholderClass: "placeholder",
-                        onSubmit: Function.prototype,
-                        onInvalid: Function.prototype
-                    };
-                if ("object" == typeof t)
-                    for (var r in i) t[r] === void 0 && (t[r] = i[r]);
-                if (n = t || i, a)
-                    for (var s = 0, o = e.length; o > s; s++) l(e[s]);
-                else l(e)
-            }, l = function(a) {
-                var i, r = a.elements,
-                    l = r.length,
-                    c = !!a.attributes.novalidate;
-                if (g(a, "invalid", o, !0), g(a, "blur", o, !0), g(a, "input", o, !0), g(a, "keyup", o, !0), g(a, "focus", o, !0), g(a, "change", o, !0), g(a, "click", u, !0), g(a, "submit", function(i) {
-                        return e = !0, t || c || a.checkValidity() ? (n.onSubmit.call(a, i), void 0) : (w(i), void 0)
-                    }, !1), !v())
-                    for (a.checkValidity = function() {
-                            return d(a)
-                        }; l--;) i = !!r[l].attributes.required, "fieldset" !== r[l].nodeName.toLowerCase() && s(r[l])
-            }, s = function(e) {
-                var t = e,
-                    a = h(t),
-                    n = {
-                        type: t.getAttribute("type"),
-                        pattern: t.getAttribute("pattern"),
-                        placeholder: t.getAttribute("placeholder")
-                    },
-                    r = /^(email|url)$/i,
-                    l = /^(input|keyup)$/i,
-                    s = r.test(n.type) ? n.type : n.pattern ? n.pattern : !1,
-                    o = p(t, s),
-                    u = m(t, "step"),
-                    v = m(t, "min"),
-                    b = m(t, "max"),
-                    g = !("" === t.validationMessage || void 0 === t.validationMessage);
-                t.checkValidity = function() {
-                    return d.call(this, t)
-                }, t.setCustomValidity = function(e) {
-                    c.call(t, e)
-                }, t.validity = {
-                    valueMissing: a,
-                    patternMismatch: o,
-                    rangeUnderflow: v,
-                    rangeOverflow: b,
-                    stepMismatch: u,
-                    customError: g,
-                    valid: !(a || o || u || v || b || g)
-                }, n.placeholder && !l.test(i) && f(t)
-            }, o = function(e) {
-                var t = C(e) || e,
-                    a = /^(input|keyup|focusin|focus|change)$/i,
-                    r = /^(submit|image|button|reset)$/i,
-                    l = /^(checkbox|radio)$/i,
-                    u = !0;
-                !L.test(t.nodeName) || r.test(t.type) || r.test(t.nodeName) || (i = e.type, v() || s(t), t.validity.valid && ("" !== t.value || l.test(t.type)) || t.value !== t.getAttribute("placeholder") && t.validity.valid ? (A(t, [n.invalidClass, n.requiredClass]), N(t, n.validClass)) : a.test(i) ? t.validity.valueMissing && A(t, [n.requiredClass, n.invalidClass, n.validClass]) : t.validity.valueMissing ? (A(t, [n.invalidClass, n.validClass]), N(t, n.requiredClass)) : t.validity.valid || (A(t, [n.validClass, n.requiredClass]), N(t, n.invalidClass)), "input" === i && u && (y(t.form, "keyup", o, !0), u = !1))
-            }, d = function(t) {
-                var a, i, r, l, s, u = !1;
-                if ("form" === t.nodeName.toLowerCase()) {
-                    a = t.elements;
-                    for (var d = 0, c = a.length; c > d; d++) i = a[d], r = !!i.attributes.disabled, l = !!i.attributes.required, s = !!i.attributes.pattern, "fieldset" !== i.nodeName.toLowerCase() && !r && (l || s && l) && (o(i), i.validity.valid || u || (e && i.focus(), u = !0, n.onInvalid.call(t, i)));
-                    return !u
-                }
-                return o(t), t.validity.valid
-            }, c = function(e) {
-                var t = this;
-                t.validationMessage = e
-            }, u = function(e) {
-                var a = C(e);
-                a.attributes.formnovalidate && "submit" === a.type && (t = !0)
-            }, v = function() {
-                return E(k, "validity") && E(k, "checkValidity")
-            }, p = function(e, t) {
-                if ("email" === t) return !q.test(e.value);
-                if ("url" === t) return !M.test(e.value);
-                if (t) {
-                    var i = e.getAttribute("placeholder"),
-                        n = e.value;
-                    return a = RegExp("^(?:" + t + ")$"), n === i ? !1 : "" === n ? !1 : !a.test(e.value)
-                }
-                return !1
-            }, f = function(e) {
-                var t = {
-                        placeholder: e.getAttribute("placeholder")
-                    },
-                    a = /^(focus|focusin|submit)$/i,
-                    r = /^(input|textarea)$/i,
-                    l = /^password$/i,
-                    s = !!("placeholder" in k);
-                s || !r.test(e.nodeName) || l.test(e.type) || ("" !== e.value || a.test(i) ? e.value === t.placeholder && a.test(i) && (e.value = "", A(e, n.placeholderClass)) : (e.value = t.placeholder, g(e.form, "submit", function() {
-                    i = "submit", f(e)
-                }, !0), N(e, n.placeholderClass)))
-            }, m = function(e, t) {
-                var a = parseInt(e.getAttribute("min"), 10) || 0,
-                    i = parseInt(e.getAttribute("max"), 10) || !1,
-                    n = parseInt(e.getAttribute("step"), 10) || 1,
-                    r = parseInt(e.value, 10),
-                    l = (r - a) % n;
-                return h(e) || isNaN(r) ? "number" === e.getAttribute("type") ? !0 : !1 : "step" === t ? e.getAttribute("step") ? 0 !== l : !1 : "min" === t ? e.getAttribute("min") ? a > r : !1 : "max" === t ? e.getAttribute("max") ? r > i : !1 : void 0
-            }, b = function(e) {
-                var t = !!e.attributes.required;
-                return t ? h(e) : !1
-            }, h = function(e) {
-                var t = e.getAttribute("placeholder"),
-                    a = /^(checkbox|radio)$/i,
-                    i = !!e.attributes.required;
-                return !(!i || "" !== e.value && e.value !== t && (!a.test(e.type) || $(e)))
-            }, g = function(e, t, a, i) {
-                E(window, "addEventListener") ? e.addEventListener(t, a, i) : E(window, "attachEvent") && window.event !== void 0 && ("blur" === t ? t = "focusout" : "focus" === t && (t = "focusin"), e.attachEvent("on" + t, a))
-            }, y = function(e, t, a, i) {
-                E(window, "removeEventListener") ? e.removeEventListener(t, a, i) : E(window, "detachEvent") && window.event !== void 0 && e.detachEvent("on" + t, a)
-            }, w = function(e) {
-                e = e || window.event, e.stopPropagation && e.preventDefault ? (e.stopPropagation(), e.preventDefault()) : (e.cancelBubble = !0, e.returnValue = !1)
-            }, C = function(e) {
-                return e = e || window.event, e.target || e.srcElement
-            }, N = function(e, t) {
-                var a;
-                e.className ? (a = RegExp("(^|\\s)" + t + "(\\s|$)"), a.test(e.className) || (e.className += " " + t)) : e.className = t
-            }, A = function(e, t) {
-                var a, i, n = "object" == typeof t ? t.length : 1,
-                    r = n;
-                if (e.className)
-                    if (e.className === t) e.className = "";
-                    else
-                        for (; n--;) a = RegExp("(^|\\s)" + (r > 1 ? t[n] : t) + "(\\s|$)"), i = e.className.match(a), i && 3 === i.length && (e.className = e.className.replace(a, i[1] && i[2] ? " " : ""))
-            }, E = function(e, t) {
-                var a = typeof e[t],
-                    i = RegExp("^function|object$", "i");
-                return !!(i.test(a) && e[t] || "unknown" === a)
-            }, $ = function(e) {
-                for (var t = document.getElementsByName(e.name), a = 0; t.length > a; a++)
-                    if (t[a].checked) return !0;
-                return !1
-            }, {
-                setup: r
-            }
-        });
-    </script>
-
-</head>
-
-<body id="page-top" class="index" cz-shortcut-listen="true">
-
-    <div id="fb-root"></div>
+		<div id="fb-root"></div>
     <script>
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -244,61 +52,45 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="http://assets.myntassets.com/v1/l00txcgni4hmgqm6ofew.png" style="display: inline;vertical-align: top;margin-top: -3px; margin-right: 15px; width: 40px;"></a>
-            </div>
+		<!-- Header -->
+			<section id="header" class="dark">
+				<header>
+					<div>
+						<img src="http://assets.myntassets.com/v1/l00txcgni4hmgqm6ofew.png" style="width: 5%;" />
+					</div>
+					<div>
+						<img style="width: 75%;" src='http://assets.myntassets.com/v1/umdjpcmcngetw2q8jarq.png' />
+					</div>
+					<!-- <h1>Welcome to Tessellate</h1> -->
+					<!-- <p>Come join us for the Myntra Hackday in April 2016.</p> -->
+				</header>
+				<footer>
+					<a href="#first" class="button scrolly">Know More</a>
+				</footer>
+			</section>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden active">
-                        <a href="#page-top"></a>
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#theme">Theme</a>
-                    </li> -->
-                    <li>
-                        <a class="page-scroll" href="#register">Register</a>
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#schedule">Schedule</a>
-                    </li> -->
-                    <li>
-                        <a class="page-scroll" href="#team">Jury</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#faqs">FAQs</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#where">Location</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+		<!-- First -->
+			<section id="first" class="main">
+				<header>
+					<div class="container">
+						<h2>The Myntra Hackday</h2>
+						<p>Come join us for an entire day of hacking. Scheduled for April 2016, the hackday is going to feature crazy ideas, great food and an awesome jury. Plus the winners will take home a large bounty of prizes!</p>
+						<p>Pick your network of choice and be the first to know when registrations open.</p>
+					</div>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">
-                    <img style="width: 75%;" src='http://assets.myntassets.com/v1/umdjpcmcngetw2q8jarq.png' />
-                </div>
-                <!-- <a href="#register" id="register-button" class="page-scroll btn btn-xl">Register Now</a> -->
+				<br />
 
-                <div>
+				<ul class="icons">
+					<li><a href="https://twitter.com/hackerramp" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="http://www.facebook.com/myntrahackerramp" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:hackerramp@myntra.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.github.com/myntra" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+
+					<br />
+					<br />
+
+					<div>
                     <div style="top: -5px; margin-left: 10px; margin-right: 5px;" class="fb-share-button" data-href="http://hackerramp.com" data-layout="button_count"></div>
                     <script src="//platform.linkedin.com/in.js" type="text/javascript">
                         lang: en_US
@@ -319,115 +111,416 @@
                     </script>
                 </div>
 
+				</header>
+				<div class="content dark style1 featured">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(narrow)">
+								<section>
+									<span class="feature-icon"><span class="icon fa-camera"></span></span>
+									<header>
+										<h3>Computer Vision</h3>
+									</header>
+									<p>Think about how you could use advanced learning systems along with the camera on a user's phone to detect interesting characteristics about a piece of clothing of an outfit that the user is pointing at. Maybe help search similar items, or detect some features about the product!</p>
+								</section>
+							</div>
+							<div class="4u 12u(narrow)">
+								<section>
+									<span class="feature-icon"><span class="icon fa-database"></span></span>
+									<header>
+										<h3>Big Data</h3>
+									</header>
+									<p>Storage became cheap and everyone now collects large amounts of data. But can you apply your favourite machine learning algorithm to find new meaning in the data? Could you find patterns in a user's buying behaviour? Maybe there is a piece of fashion that data says should exist, but currently does not?</p>
+								</section>
+							</div>
+							<div class="4u 12u(narrow)">
+								<section>
+									<span class="feature-icon"><span class="icon fa-comments"></span></span>
+									<header>
+										<h3>Artificial Intelligence</h3>
+									</header>
+									<p>It is now possible to build systems that understand human language, both written and speech. Could the job of a physical shopkeeper be now replaced with a virtual one? Could your next stylist be an app on your phone? Could calling customer support be a thing of the past?</p>
+								</section>
+							</div>
+						</div>
+						<!-- <div class="row">
+							<div class="12u">
+								<footer>
+									<a href="#second" class="button scrolly">I am already excited</a>
+								</footer>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</section>
+
+		<!-- Second -->
+			<section id="second" class="main">
+				<header>
+					<div class="container">
+						<h2>Photos - Hackathon 2015</h2>
+						<p>The mayhem, the madness, the celebration.</p>
+					</div>
+				</header>
+				<div class="content dark style2">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(narrow)">
+								<section>
+									<p>Hackerramp 2015 was Myntra’s first open hackathon.</p>
+
+									<p>Thanks to all the 180 participants who made this event a grand success. We had around 35 teams presenting their amazing hacks to the Jury.</p>
+
+									<p>The goal was simple - make the next big thing in mobile. Be it an app, an API or even something related to mobile security.</p>
+
+									<p>For more than 24 hours, keeping themselves fuelled on Red Bull, the teams raced the clock and converted their ideas into real working demos.</p>
+
+									<p>There was great food throughout the day, great talks to kick off the event and some great goodies for the participants to take home!</p>
+
+<!-- 									<footer>
+										<a href="#third" class="button scrolly">Accumsan nisi tempor</a>
+									</footer>
+ -->								</section>
+							</div>
+							<div class="8u 12u(narrow)">
+								<div class="row">
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/OyVYhnb.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/SjDbZgr.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/NCmnqOD.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/kx8Z2Yzl.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/1FHuo51l.jpg" alt="" /></a></div>
+									<div class="6u"><a href="#" class="image fit"><img src="https://i.imgur.com/sDTmmZ1l.jpg" alt="" /></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Third -->
+			<section id="third" class="main">
+				<header>
+					<div class="container">
+						<h2>Judging Day - Hackathon 2015</h2>
+						<p>Highlights from last year. This year, twice as awesome.</p>
+					</div>
+				</header>
+				<div class="content dark style3">
+					<div class="container">
+						<span class="image featured"><img src="http://i.imgur.com/YLJpYGEl.jpg" alt="" /></span>
+						<div class="row">
+							<div class="8u 12u(narrow)">
+								<h3>The Jury from the 2015 Hackathon</h3>
+								<ul class="default">
+									<li>Amit Somani - ex-CPO, MakeMyTrip</li>
+									<li>Amod Malviya - then-CTO, Flipkart</li>
+									<li>Shamik Sharma - CTO, Myntra</li>
+									<li>Pramod Varma - Chief Architect, Unique Identification Authority of India</li>
+								</ul>
+							</div>
+							<div class="8u 12u(narrow)">
+								<h3>The Winners from the 2015 Hackathon</h3>
+								<p>When you have 35 highly-driven teams competing for a prize bucket of 3,00,000 rupees, you know they Jury is going to have a hard time deciding. So hard, that they actually announced four winners!</p>
+								<ol class="default">
+									<li>Chat based commerce (Daredevils): Himadri, Jatin, Vijay amd Mohan from Hike. They are part of Hike’s iOS team. Prize: Rs. 1,50,000.</li>
+									<li>Chat with friends realtime to buy products (Fashion Friends): Nikhil Bansal, Anurag Saxena, Shivam Gupta & Neera Singh. They are from Flipkart, Marketshare, Vizury and Parcelled. Prize: Rs. 75,000.</li>
+									<li>Augmented Reality Shooting Game (Massacre): Nilesh Hiray and Naveen Reddy from Myntra. Prize: Rs. 50,000.</li>
+									<li>Smart Links (The app that links all other apps): Niketh and Niteesh. They are from Yahoo ad Fungru. Prize: Rs. 25,000.</li>
+								</ol>
+							</div>
+
+							<div class="8u 12u(narrow)">
+								<h3>Talks from the 2015 Hackathon</h3>
+								<ol class="default">
+									<li>Shamik Sharma spoke about the new possibilities coming out of the mobile emergence.</li>
+									<li>Punit Soni spoke about his move from US to India and his experience at Google and Motorola.</li>
+									<li>Sunil Pai spoke about recent trends and changes in programming - introducing Reactive Programming to the audience.</li>
+								</ol>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+<section id="third" class="main">
+				<header>
+					<div class="container">
+						<h2>FAQs</h2>
+						<p>Questions asked frequently. Possibly. Maybe not. Either way, we attempt to answer them below.</p>
+					</div>
+				</header>
+				<div class="content dark style3">
+		       <div class="container">
+              
+						<b>Is the event open to all?</b>
+						<p>Yes.</p>
+
+						<b>What is the venue for the hackathon?</b>
+						<p>Myntra Office, Bangalore.</p>
+
+						<b>What about food?</b>
+						<p>Food is on us.</p>
+
+						<b>Is it compulsory to stay back overnight?</b>
+						<p>Not necessary.</p>
+
+						<b>Do I need to bring my laptop?</b>
+						<p>Yes.</p>
+
+						<b>Can I participate as an individual?</b>
+						<p>Yes, you can participate as an individual or in a team.</p>
+
+						<b>What is the team size limit?</b>
+						<p>Each team can have a maximum of 4 members.</p>
+
+						<b>Will there be goodies?</b>
+						<p>Yes!</p>
+                                
+						<b>Is there any registration fee?</b>
+						<p>No.</p>
+
+						<b>I have another concern.</b>
+						<p>Please email us at hackerramp@myntra.com</p>
+
             </div>
+
         </div>
-    </header>
+				</div>
+			</section>
 
-    <div class="container register">
-        <a href="#register" class="page-scroll btn btn-xl">Register Now</a>
-    </div>
+		<!-- Basic Elements -->
+		
+			<!-- <section class="main">
+				<header>
+					<div class="container">
+						<h2>A Whole Lotta Elements</h2>
+						<p>General purpose elements for every general purpose. Or something like that.</p>
+					</div>
+				</header>
+				<div class="content style1 dark">
+					<div class="container">
+						<section>
+							<header>
+								<h3>Paragraph</h3>
+								<p>This is a byline</p>
+							</header>
+							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
+							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
+							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
+							amet risus elit.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Blockquote</h3>
+							</header>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
+							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
+						</section>
+						<section>
+							<header>
+								<h3>Divider</h3>
+							</header>
+							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+							<hr />
+							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
+							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+							posuere cubilia.</p>
+						</section>
+						<section>
+							<header>
+								<h3>Unordered List</h3>
+							</header>
+							<ul class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ul>
+						</section>
+						<section>
+							<header>
+								<h3>Ordered List</h3>
+							</header>
+							<ol class="default">
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
+							</ol>
+						</section>
+						<section>
+							<header>
+								<h3>Table</h3>
+							</header>
+							<div class="table-wrapper">
+								<table class="default">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>00001</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00002</td>
+											<td>Sit amet nullam</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00003</td>
+											<td>Feugiat felis viverra</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>00004</td>
+											<td>Sagittis enim felis</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>00005</td>
+											<td>Nullam sed vestibulum</td>
+											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+											<td>19.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+						<section>
+							<header>
+								<h3>Form</h3>
+							</header>
+							<form method="post" action="#">
+								<div class="row 50%">
+									<div class="6u 12u(narrow)">
+										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
+									</div>
+									<div class="6u 12u(narrow)">
+										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<div class="select" tabindex="-1">
+											<select name="department" id="department">
+												<option value="">Choose a department</option>
+												<option value="1">Manufacturing</option>
+												<option value="2">Administration</option>
+												<option value="3">Support</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
+									</div>
+								</div>
+								<div class="row 50%">
+									<div class="12u">
+										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<ul class="actions">
+											<li><input type="submit" class="button" value="Send Message" /></li>
+											<li><input type="reset" class="button alt" value="Clear Form" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</section> -->
+		
 
-    <!-- theme Section -->
-    <section id="hello">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Myntra Mobile Hackday</h2>
-                    <!-- <h4 class="section-heading text-muted">25th April, <a style="color: #666;" href="#where">Myntra Office, Bangalore.</a></h4> -->
-                    <h4 class="section-heading text-muted">Coming Soon...</h4>
-                    <h3></h3>
-                </div>
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 text-justify">
-                <p class="large text-muted">Welcome to HackerRamp, 2016. Calling out to all coders, hackers, tinkerers and madcaps to come together and build the future of mobile, fashion and commerce.</p>
-                <!-- <p class="large text-muted">Limited seats available, register soon! You can sign up as an individual or in a team of up to 4.</p> -->
-                <p class="large text-muted">Things to look forward to include:</p>
-                <ul class="large text-muted">
-                    <li>Feedback and Talks</li>
-                    <li>Exciting prizes</li>
-                    <li>Food and drinks</li>
-                </ul>
-                <p class="large text-muted">Spread the word!</p>
-            </div>
-        </div>
-    </section>
+		<!-- Fourth -->
+			<section id="fourth" class="main">
+				<header>
+					<div class="container">
+						<h2>Registrations Opening Soon</h2>
+						<p>Follow us on your choice of network and be the first to know!</p>
+					</div>
 
-    <!-- <section id="theme">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Theme</h2>
-                    <h3 class="section-subheading text-muted">Build the future of mobile.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Mobile API</h4>
-                    <p class="text-muted">Build an API to power the next generation of mobile apps. Recommendations, location, suggestions, photos - come up with new uses for data generated from mobile devices.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Mobile App</h4>
-                    <p class="text-muted">Can you think of the next famous mobile app or website? Use the platform you like: Web, Android, iOS or Windows. Hack your heart out and build the future.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Mobile Security</h4>
-                    <p class="text-muted">If mobile is so big, we need larger locks! Can you think of ways to enhance the security of mobile apps and APIs? Think of ways to ensure privacy in the age of ever-prevalent sharing.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
+					<br />
 
-    <!-- Contact Section -->
-    <section id="register">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Register</h2>
-                    <!-- <h3 class="section-subheading text-muted">Teams would ideally be of 2-4 members.</h3> -->
-                    <h3 class="section-subheading text-muted">Watch this space for more details...</h3>
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col-lg-3 text-center"></div>
-                <div class="col-lg-6 text-center">
+					<ul class="icons">
+						<li><a href="https://twitter.com/hackerramp" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="http://www.facebook.com/myntrahackerramp" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="mailto:hackerramp@myntra.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.github.com/myntra" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
 
-                    <iframe src="https://docs.google.com/a/myntra.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/formResponse?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;" onload="if(window.submitted)
+				</header>
+
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+			<!-- UNCOMMENT TO ENABLE REGISTRATIONS -->
+
+				<div class="content style4 featured">
+					<div class="container 75%">
+						
+						   <!-- <iframe src="https://docs.google.com/a/myntra.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/formResponse?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" style="display:none;" onload="if(window.submitted)
 {alert('Registered');location.reload();}" name="hidden_iframe" id="hidden_iframe">Loading...</iframe>
 
                     <div class="row">
-                        <div class="col-md-8" style="margin: 0 auto;float: none;">
+                        <div class="col-md-6" style="margin: 0 auto;float: none;">
                             <div id="successPlaceholder"> </div>
                             <form action="https://docs.google.com/a/myntra.com/forms/d/1klLKOWTSI_kCduytb4TFDz55XzpI6EVnnO8YZ3g5Ofk/formResponse?embedded=true" method="POST" id="ss-form" target="hidden_iframe" onsubmit="window.submitted=true;">
                                 <ol role="list" class="ss-question-list" style="padding-left: 0" id="contactForm" novalidate="">
-                                    <div class="form-group">
+                                <div class="row 30%">
+                                    <div class="4u 12u(mobile)">
                                         <input type="text" name="entry.173266981" value="" class="ss-q-short form-control" id="entry_173266981" dir="auto" aria-label="Name (On event day, please carry an ID card with you.) " aria-required="true" required="" title="" placeholder="Name">
                                         <div class="error-message" id="140820943_errorMessage"></div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="4u 12u(mobile)">
                                         <input type="text" name="entry.265480531" value="" class="ss-q-short form-control" id="entry_265480531" dir="auto" aria-label="Email ID  " aria-required="true" required="" title="" placeholder="Email ID">
                                         <div class="error-message" id="1281563802_errorMessage"></div>
                                     </div>
-
-                                    <div class="form-group">
+                                    <div class="4u 12u(mobile)">
                                         <input type="text" name="entry.193954616" value="" class="ss-q-short form-control" id="entry_193954616" dir="auto" aria-label="Phone Number  " title="" placeholder="Phone Number">
                                         <div class="error-message" id="1191391589_errorMessage"></div>
                                     </div>
-
-                                    <div class="ss-form-question errorbox-good" role="listitem">
+															</div>
+<br/>
+<div class="row 30%">
+                                    <div class="4u 12u(mobile) ss-form-question errorbox-good" role="listitem">
                                         <div dir="ltr" class="ss-item  ss-radio">
-                                            <div class="ss-form-entry">
+                                            <div class=" ss-form-entry">
                                                 <label class="ss-q-item-label" for="entry_1799457230">
                                                     <div class="ss-q-title text-muted">T-shirt Size
                                                     </div>
@@ -445,17 +538,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <br />
-                                    <div class="form-group">
+                                    <div class="4u 12u(mobile) form-group">
                                         <input type="text" name="entry.1812022483" value="" class="ss-q-short form-control" id="entry_1812022483" dir="auto" aria-label="Team Name (optional) Please ask your team members (if any) to also register with this form. " title="" placeholder="Team Name (optional)">
                                         <div class="error-message" id="110996319_errorMessage"></div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="4u 12u(mobile) form-group">
                                         <input type="text" name="entry.1285110315" value="" class="ss-q-short form-control" id="entry_1285110315" dir="auto" aria-label="Idea (optional)  " title="" placeholder="Idea (optional)">
                                         <div class="error-message" id="483637737_errorMessage"></div>
                                     </div>
-
+</div>
                                     <input type="hidden" name="draftResponse" value="[,,&quot;9039545399035243575&quot;]">
                                     <input type="hidden" name="pageHistory" value="0">
                                     <input type="hidden" name="fbzx" value="9039545399035243575">
@@ -467,416 +559,59 @@
                                 </ol>
                         </div>
                     </div>
-                    </form>
+                    </form> -->
 
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-    <!-- schedule Section -->
-    <!-- <section id="schedule">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Schedule</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4><br />25th APRIL</h4>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/myntra-office.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>9 AM</h4>
-                                    <h4 class="subheading">Registration</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Collect badges. Get connected. Form teams. Make friends. Brainstorm ideas. Get ready for the day!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/shamik-sharma.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>10 AM</h4>
-                                    <h4 class="subheading">Keynote</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Shamik Sharma</p>
-                                    <p class="text-muted">CTO, Myntra</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/code.jpeg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>11 AM - ?</h4>
-                                    <h4 class="subheading">Hack Away!</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">+ Open floor for lightning talks</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/sunil-pai.jpeg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>11 AM - 12 PM</h4>
-                                    <h4 class="subheading">Talk</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Sunil Pai</p>
-                                    <p class="text-muted">Architect, Myntra</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/punit-singh.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>12 PM - 1 PM</h4>
-                                    <h4 class="subheading">Talk</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Punit Soni</p>
-                                    <p class="text-muted">CPO, Flipkart</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4><br />26th APRIL</h4>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="./img/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>9AM</h4>
-                                    <h4 class="subheading">Demo and Presentations</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted"></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Last Year's Jury</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./img/pramod-varma.jpg" width=200 class="img-responsive img-circle" alt="">
-                        <h4>Pramod Varma</h4>
-                        <p class="text-muted">Chief Architect, Unique Identification Authority of India (UIDAI)</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./img/amod-malviya.jpg" width=200 class="img-responsive img-circle" alt="">
-                        <h4>Amod Malviya</h4>
-                        <p class="text-muted">ex-CTO, Flipkart</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./img/amit-somani.jpg" width=200 class="img-responsive img-circle" alt="">
-                        <h4>Amit Somani</h4>
-                        <p class="text-muted">ex-CPO, MakeMyTrip</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="team-member">
-                        <img src="./img/shamik-sharma.jpg" width=200 class="img-responsive img-circle" alt="">
-                        <h4>Shamik Sharma</h4>
-                        <p class="text-muted">CTO, Myntra</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">You'll be presenting your future of mobile to the Jury on 26th April morning.</p>
-                    <p class="large text-muted">A total prize bucket of more than Rs. 3,00,000 is up for grabs!</p>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-    <!-- <section style="background-color: #3a3a3a">
-        <div class="container">
-            <div class="row text-center">
-                <p class="text-center">
-                    <img width=400 src="/img/large-text.jpg" />
-                </p>
-            </div>
-        </div>
-    </section> -->
-
-    <section id="faqs">
-        <div class="container">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">FAQs</h2>
-                <h3 class="section-subheading text-muted">Email us at hackerramp@myntra.com with further queries.</h3>
-            </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Is the event open to all?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse">
-                            <div class="panel-body">
-                                Yes.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">What is the venue for the hackathon?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse">
-                            <div class="panel-body">
-                                Myntra Office, Bangalore.
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What about food?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseFour" class="panel-collapse">
-                            <div class="panel-body">
-                                Food is on us.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Is it compulsory to stay back overnight?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseFive" class="panel-collapse">
-                            <div class="panel-body">
-                                Not necessary.
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Do I need to bring my laptop?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseSix" class="panel-collapse">
-                            <div class="panel-body">
-                                Yes.
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Can I participate as an individual?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseSeven" class="panel-collapse">
-                            <div class="panel-body">
-                                Yes, you can participate as an individual or in a team.
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">What is the team size limit?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseNine" class="panel-collapse">
-                            <div class="panel-body">
-                                Each team can have a maximum of 4 members.
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Will there be goodies?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseNine" class="panel-collapse">
-                            <div class="panel-body">
-                                Yes!
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-            <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Is there any registration fee?<i class="indicator icon-plus pull-right"></i></p>
-          </h4>
-                        </div>
-                        <div id="collapseTen" class="panel-collapse">
-                            <div class="panel-body">
-                                No.
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section id="where">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Location</h2>
-                    <!--                     <h3 class="section-subheading text-muted">Build the future of mobile.</h3> -->
-                </div>
-            </div>
-
-            <div class="map col-lg-12">
+					</div>
+				</div>
+			</section>
+			
+			<section id="fifth" class="main">
+				<header>
+					<div class="container">
+						<h2>Venue</h2>
+						<p>
+							Myntra Designs,
+							<br />
+							AKR Tech Park,
+							<br />
+							Off Hosur Road, Bengaluru,
+							<br />
+							Karnataka 560068, India
+						</p>
+					</div>
+				</header>
+				<div class="content style4 featured">
+					<div class="container 75%">
+						<div class="map col-lg-12">
                 <iframe width="800" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD9qoa68uzE9xtT_Gb-7nHaHnwHkbF2_-k&q=Myntra+Designs,+Krishna+Reddy+Industrial+Area,+Hosapalya,+Muneshwara+Nagar,+Bengaluru,+Karnataka+560068"></iframe>
             </div>
-        </div>
-    </section>
+					</div>
+				</div>
+			</section>
 
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/hackerramp" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="http://www.facebook.com/myntrahackerramp" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:hackerramp@myntra.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.github.com/myntra" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<div class="copyright">
+					<ul class="menu">
+						<li>Email us at hackerramp@myntra.com for any queries.</li>
+						<li>&copy; Myntra Designs Pvt. Ltd. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="copyright">Email us at hackerramp@myntra.com for any queries.</p>
-                    <p class="copyright">Copyright © Myntra 2016</p>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="./js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="./js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="./js/jquery.easing.min.js"></script>
-    <script src="./js/classie.js"></script>
-    <script src="./js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="./js/jqBootstrapValidation.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="./js/agency.js"></script>
-
-</body>
-
+	</body>
 </html>
