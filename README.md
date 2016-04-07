@@ -1,1 +1,1 @@
-Website for the Myntra Mobile Hackday.
+Website for Myntra Hackday 2016.
